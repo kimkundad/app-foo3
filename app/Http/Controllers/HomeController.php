@@ -63,7 +63,7 @@ class HomeController extends Controller
                     'categories.*',
                     )
                     ->leftjoin('categories', 'categories.id',  'games.cat_id')
-                    ->where('games.cat_id', 2)
+                    ->where('games.cat_id', 1)
                     ->get();
                 
                 return view('games', compact('objs'));

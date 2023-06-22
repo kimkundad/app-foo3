@@ -82,6 +82,42 @@ span, p , li ,strong, option , label, input, a, b {
     min-height: 800px;
 
   }
+
+  @media (max-width: 991px) {
+
+    .chakra-container-page3{
+      background: url('../img/home2/page2/BG-1.jpg') no-repeat center center fixed; 
+      background-size: contain;
+      background-position: center top;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      min-height: 800px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 26rem;
+      padding-left: 0rem;
+      padding-right: 0rem;
+  
+    }
+
+    .chakra-container-page5{
+      background: url('../img/home2/page3/BG-1.jpg') no-repeat center center fixed; 
+      background-size: contain;
+      background-position: center top;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 26rem;
+      padding-left: 0rem;
+      padding-right: 0rem;
+      min-height: 800px;
+  
+    }
+
+  }
   .chakra-container-f{
     width: 100%;
     height: auto;

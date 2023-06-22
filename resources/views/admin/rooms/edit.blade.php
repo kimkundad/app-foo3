@@ -136,7 +136,7 @@
                                 </div>
 
 
-                                @if($game->cat_id == 2)
+                                @if($game->cat_id == 1)
                                 <div class="row mb-0">
                                     <!--begin::Label-->
                                     <label class="col-lg-4 col-form-label fw-semibold fs-6">Hot Game</label>

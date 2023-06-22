@@ -40,14 +40,14 @@
 
                             <a href="{{ url('rooms_slot?casino='.$u->game_name_short) }}">
                                 <img class="img-fluid" src="{{ url('images/game/game/'.$u->game_image) }}">
-                                <img class="img-fluid" src="{{ url('/home/assets/img/page3/Click-Now.png') }}" style="height: 20px; margin-top: -60px;">
+                                <img class="img-fluid" src="{{ url('/home/assets/img/page3/Click-Now.png') }}" style="height: 20px; margin-top: 0px;">
                             </a>
 
                             @else
 
                             <a href="{{ url('rooms?casino='.$u->game_name_short) }}">
                                 <img class="img-fluid" src="{{ url('images/game/game/'.$u->game_image) }}">
-                                <img class="img-fluid" src="{{ url('/home/assets/img/page3/Click-Now.png') }}" style="height: 20px; margin-top: -60px;">
+                                <img class="img-fluid" src="{{ url('/home/assets/img/page3/Click-Now.png') }}" style="height: 20px; margin-top: 0px;">
                             </a>
 
                             @endif

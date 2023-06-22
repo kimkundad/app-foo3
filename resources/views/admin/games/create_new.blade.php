@@ -59,7 +59,7 @@
                             
                             <div class="card-body border-top p-9">
                             
-                                @if($objs->cat_id == 2)
+                                @if($objs->cat_id == 1)
 
                                 <div class="row mb-6">
                                     <!--begin::Label-->

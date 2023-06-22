@@ -83,7 +83,7 @@ span, p , li ,strong, option , label, input, a, b {
 
   }
 
-  @media (max-width: 991px) {
+  @media (min-width: 991px) {
 
     .chakra-container-page3{
       background: url('../img/home2/page2/BG-1.jpg') no-repeat center center fixed; 

@@ -36,7 +36,7 @@
 
                     <div class="col-6 col-6-new ">
                         <div class="text-center">
-                            @if($u->cat_id == 2)
+                            @if($u->cat_id == 1)
 
                             <a href="{{ url('rooms_slot?casino='.$u->game_name_short) }}">
                                 <img class="img-fluid" src="{{ url('images/game/game/'.$u->game_image) }}">

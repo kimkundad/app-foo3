@@ -134,15 +134,30 @@
                                             $your_date = strtotime($item->birthday);
                                             $datediff = $your_date - $now;
                                             $sumday = round($datediff / (60 * 60 * 24));
+
+                                            $today = date("Y-m-d H:i"); 
+                                            $startdate = $item->birthday; 
+                                            $offset = strtotime("+1 day");
+                                            $enddate = date($startdate, $offset);    
+                                            $today_date = new DateTime($today);
+                                            $expiry_date = new DateTime($enddate);
+
+                                            $time1 = new DateTime($item->birthday);
+                                            $time2 = new DateTime(date("Y-m-d H:i"));
+                                            $interval = $time1->diff($time2);
+
                                             @endphp
                                             <td>
-                                                @if($sumday <= 0)
+                                                @if($sumday <= 0 && $expiry_date < $today_date)
                                                 <b class="text-danger"> หมดอายุแล้ว </b>
                                                 @elseif($sumday <= 7)
-                                                <b class="text-warning"> {{ $item->birthday }}  ใกล้อายุแล้ว </b>
+                                                <b class="text-warning"> {{ $item->birthday }}  ใกล้อายุแล้ว {{ $sumday }} วัน {{ $interval->format('%i') }} นาที.</b>
                                                 @else
                                                 {{ $item->birthday }}
                                                 @endif
+
+                                                
+                                                
                                             </td>
                                             <td>
                                                 {{ $item->created_ats }}

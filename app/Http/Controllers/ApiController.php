@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\DB;
 use App\Models\category;
 use App\Models\game;
 use App\Models\room;
+use App\Models\setting;
 
 class ApiController extends Controller
 {

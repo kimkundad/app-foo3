@@ -11,6 +11,8 @@
 
 @section('content')
 
+
+
 <div id="main" class="layout-column flex">
     <div class="chakra-container-page3">
         <div id="content" class="flex ">
@@ -30,7 +32,7 @@
                 <div class="box-height-10"></div>
                 <div class="card-body">
                 <div class="row" >
-
+            
                 @if(isset($objs))
                 @foreach($objs as $u)
 

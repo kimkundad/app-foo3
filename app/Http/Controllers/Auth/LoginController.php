@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use Session;
 use Auth;
 use Illuminate\Support\Facades\DB;
+use DateTime;
 
 
 class LoginController extends Controller
@@ -63,18 +64,21 @@ class LoginController extends Controller
 
      //   dd($request->user()->birthday);
 
-        $now = time(); // or your date as well
-        $your_date = strtotime($request->user()->birthday);
-        $datediff = $your_date - $now;
-        $sumday = round($datediff / (60 * 60 * 24));
+        $today = date("Y-m-d H:i"); 
+        $startdate = $request->user()->birthday; 
+        $offset = strtotime("+1 day");
+        $enddate = date($startdate, $offset);    
+        $today_date = new DateTime($today);
+        $expiry_date = new DateTime($enddate);
   
-        if($sumday <= 0){
+        if ($expiry_date < $today_date) { 
             $request->session()->flush();
             return redirect(url('login'))->with('expired','อายุใช้งานของคุณหมด กรุณาติดต่อเจ้าหน้าที่');
-        }else{
-            return redirect('/welcome');
-        }
 
+         }else{
+    
+            return redirect('/welcome');
+         }
         
        
      }

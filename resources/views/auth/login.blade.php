@@ -29,8 +29,8 @@
                 </div>
                 @endif
 
-                <div class="text-center">
                 @error('username')
+                <div class="text-center">
                 <span class="invalid-feedback" role="alert">
                     <strong>ไม่พบยูสเซอร์เนมหรือพาสเวิร์ดผิด </strong>
                 </span>

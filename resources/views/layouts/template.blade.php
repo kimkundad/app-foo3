@@ -30,17 +30,18 @@
 <body class="layout-row">
     
 
-@if (Auth::guest())
-@else
-@php
-$now = time(); // or your date as well
-        $your_date = strtotime(Auth::user()->birthday);
-        $datediff = $your_date - $now;
-        $sumday = round($datediff / (60 * 60 * 24));
+        @if (Auth::guest())
+        @else
+        @php
+        $today = date("Y-m-d H:i"); 
+        $startdate = Auth::user()->birthday; 
+        $offset = strtotime("+1 day");
+        $enddate = date($startdate, $offset);    
+        $today_date = new DateTime($today);
+        $expiry_date = new DateTime($enddate);
         @endphp
-        @if($sumday <= 0)
- 
-            <script>window.location = "{{ url('/logout') }}";</script>
+        @if($expiry_date < $today_date) 
+        <script>window.location = "{{ url('/logout') }}";</script>
         @endif
    
 @endif

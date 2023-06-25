@@ -65,6 +65,8 @@ class HomeController extends Controller
                     ->leftjoin('categories', 'categories.id',  'games.cat_id')
                     ->where('games.cat_id', 1)
                     ->get();
+
+                //    dd($objs);
                 
                 return view('games', compact('objs'));
 

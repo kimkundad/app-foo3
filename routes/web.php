@@ -34,7 +34,7 @@ Route::get('/images/{file}', function ($file) {
 	return abort(404);
   })->where('file', '.+');
 
-
+  
 Route::get('/call_percent', [App\Http\Controllers\ApiController::class, 'call_percent'])->name('call_percent');
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'welcome'])->name('welcome');
@@ -51,6 +51,7 @@ Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Route::post('custom-login', [CustomAuthController::class, 'customLogin'])->name('login.custom'); 
 
 Route::get('/game-room-{id}-{room}', [App\Http\Controllers\HomeController::class, 'game_room'])->name('game_room');
+
 
 
 Route::group(['middleware' => ['UserRole:superadmin|admin']], function() {

@@ -39,15 +39,19 @@
             </div>
             <div class="text-center">
                 <a href="#">
-                    <img class="img-fluid" src="{{ url('/home/assets/img/home2/page3/เหลือระยะเวลาอีก.png') }}" style=" height: 32px; ">
+                    <img class="img-fluid" src="{{ url('/home/assets/img/home2/page3/เหลือระยะเวลาอีก.png') }}" style=" height: 32px; width: 240px;">
                     @php
 
                                             $now = time(); // or your date as well
                                             $your_date = strtotime(Auth::user()->birthday);
                                             $datediff = $your_date - $now;
                                             $sumday = round($datediff / (60 * 60 * 24));
+
+                                            $time1 = new DateTime(Auth::user()->birthday);
+                                            $time2 = new DateTime(date("Y-m-d H:i"));
+                                            $interval = $time1->diff($time2);
                      @endphp
-                    <p class="text-white-p5">เหลือระยะเวลาอีก : {{ $sumday }} วัน</p>
+                    <p class="text-white-p5">เหลือระยะเวลาอีก : {{ $sumday }} วัน {{ $interval->format('%i') }} นาที</p>
                 </a>
                 <p class="text-online-p5"><img class="img-fluid" src="{{ url('/home/assets/img/home2/page3/ออนไลน์จำนวนคน.png') }}" style="width:20px; height: 20px; "> ออนไลน์ : {{ get_user_online() }} คน</p>
             </div>

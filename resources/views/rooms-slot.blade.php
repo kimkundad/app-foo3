@@ -12,6 +12,7 @@
     padding-right: 2px !important;
     padding-left: 2px !important;
     min-height: 90px;
+    margin-bottom: 15px;
 }
 </style>
 

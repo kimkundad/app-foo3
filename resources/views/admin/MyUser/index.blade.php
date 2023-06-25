@@ -153,7 +153,7 @@
                                                 @elseif($sumday <= 7)
                                                 <b class="text-warning"> {{ $item->birthday }}  ใกล้อายุแล้ว {{ $sumday }} วัน {{ $interval->format('%i') }} นาที.</b>
                                                 @else
-                                                {{ $item->birthday }} {{ $sumday }} วัน {{ $interval->format('%i') }} นาที.
+                                                {{ $item->birthday }} <b class="text-success"> {{ $sumday }} วัน {{ $interval->format('%i') }} นาที. </b>
                                                 @endif
 
                                                 

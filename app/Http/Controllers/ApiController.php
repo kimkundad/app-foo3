@@ -26,7 +26,10 @@ class ApiController extends Controller
 
             }
         }
-        
+        $id = 1;
+            $objs = setting::find($id);
+            $objs->twitter = rand(2500,4000);
+            $objs->save();
 
         return response()->json([
             'data' => [

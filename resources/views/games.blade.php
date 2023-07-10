@@ -17,11 +17,16 @@
     <div class="chakra-container-page3">
         <div id="content" class="flex ">
             <div class="box-height-20"></div>
-            <div class="text-center">
-                <a href="{{ url('/welcome') }}">
-                    <img class="img-fluid logo_website_game" src="{{ url('/home/assets/img/home2/logo_app2.png') }}" >
+            <div class="d-flex flex-row-reverse pad-l-r">
+                
+                <a href="{{ url('/logout') }}">
+                    <img class="img-fluid" src="{{ url('/home/assets/img/home2/page3/ล็อคเอ้าท์.png') }}" style="height: 30px; width:85px;">
                 </a>
             </div>
+            <div class="text-center">
+            <a href="{{ url('/welcome') }}">
+                <img class="img-fluid logo_website_slot" src="{{ url('/home/assets/img/home2/logo_app2.png') }}">
+            </a>
                 
                 <div class="text-center">
                     <a href="#">

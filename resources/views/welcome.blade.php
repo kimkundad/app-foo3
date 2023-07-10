@@ -15,8 +15,16 @@
     <div class="chakra-container-page3">
         <div id="content" class="flex ">
             <div class="box-height-20"></div>
+            <div class="d-flex justify-content-between pad-l-r">
+                <a href="{{ url('rooms?casino='.$objs->casino) }}">
+                    <img class="img-fluid" src="{{ url('/home/assets/img/page5/change_room.png') }}" style="height: 35px; width:82px;" />
+                </a>
+                <a href="{{ url('/logout') }}">
+                    <img class="img-fluid" src="{{ url('/home/assets/img/page5/Logout.png') }}" style="height: 35px; width:82px;">
+                </a>
+            </div>
             <a href="{{ url('/welcome') }}">
-                <img class="img-fluid logo_website" src="{{ url('/home/assets/img/LOGO.png') }}">
+                <img class="img-fluid logo_website4" src="{{ url('/home/assets/img/LOGO.png') }}">
             </a>
                 
             @if(isset($objs))
@@ -34,7 +42,6 @@
 
                 @endforeach
             @endif
-
            
             {{-- <a href="./page7.html">
                 <img class="img-fluid contain_img_2" src="{{ url('/home/assets/img/Slot.png') }}" >

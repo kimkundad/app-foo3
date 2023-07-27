@@ -118,57 +118,19 @@
     <div class="-casino-wrapper">
             <ul class="-nav-container">
                                 
-            <li class="-nav-item -width-mobile" style="width: calc(100% / 8)">
-                <img src="https://asset.cloudigame.co/build/admin/img/lobby_main/sa-gaming-logo-circle.png" data-src="https://asset.cloudigame.co/build/admin/img/lobby_main/sa-gaming-logo-circle.png" alt="" class="-logo-circle lazyload">
-            </li>
-                        
-            <li class="-nav-item -width-mobile" style="width: calc(100% / 8)">
-                <img src="{{ url('/home/build/web/shared/img/loading-lobby-circle.gif') }}" data-src="https://asset.cloudigame.co/build/admin/img/lobby_main/sexy-bac-logo-circle.png" alt="" class="-logo-circle lazyload">
-            </li>
-                        
-            <li class="-nav-item -width-mobile" style="width: calc(100% / 8)">
-                <img src="{{ url('/home/build/web/shared/img/loading-lobby-circle.gif') }}" data-src="https://asset.cloudigame.co/build/admin/img/lobby_main/wm-logo-circle.png" alt="" class="-logo-circle lazyload">
-            </li>
-                        
-            <li class="-nav-item -width-mobile" style="width: calc(100% / 8)">
-                <img src="{{ url('/home/build/web/shared/img/loading-lobby-circle.gif') }}" data-src="https://asset.cloudigame.co/build/admin/img/lobby_main/dream-gaming-logo-circle.png" alt="" class="-logo-circle lazyload">
-            </li>
-                        
-            <li class="-nav-item -width-mobile" style="width: calc(100% / 8)">
-                <img src="{{ url('/home/build/web/shared/img/loading-lobby-circle.gif') }}" data-src="https://asset.cloudigame.co/build/admin/img/lobby_main/allbet-logo-circle.png" alt="" class="-logo-circle lazyload">
-            </li>
-                        
-            <li class="-nav-item -width-mobile" style="width: calc(100% / 8)">
-                <img src="{{ url('/home/build/web/shared/img/loading-lobby-circle.gif') }}" data-src="https://asset.cloudigame.co/build/admin/img/lobby_main/asia-gaming-logo-circle.png" alt="" class="-logo-circle lazyload">
-            </li>
-                        
-            <li class="-nav-item -width-mobile" style="width: calc(100% / 8)">
-                <img src="{{ url('/home/build/web/shared/img/loading-lobby-circle.gif') }}" data-src="https://asset.cloudigame.co/build/admin/img/lobby_main/pretty-gaming-logo-circle.png" alt="" class="-logo-circle lazyload">
-            </li>
-                        
-            <li class="-nav-item -width-mobile" style="width: calc(100% / 8)">
-                <img src="{{ url('/home/build/web/shared/img/loading-lobby-circle.gif') }}" data-src="https://asset.cloudigame.co/build/admin/img/lobby_main/eg-logo-circle.png" alt="" class="-logo-circle lazyload">
-            </li>
-                        
-            <li class="-nav-item -width-mobile" style="width: calc(100% / 8)">
-                <img src="{{ url('/home/build/web/shared/img/loading-lobby-circle.gif') }}" data-src="https://asset.cloudigame.co/build/admin/img/lobby_main/wt-pt-live-logo-circle.png" alt="" class="-logo-circle lazyload">
-            </li>
-                        
-            <li class="-nav-item -width-mobile" style="width: calc(100% / 8)">
-                <img src="{{ url('/home/build/web/shared/img/loading-lobby-circle.gif') }}" data-src="https://asset.cloudigame.co/build/admin/img/lobby_main/wt-bg-logo-circle.png" alt="" class="-logo-circle lazyload">
-            </li>
-                        
-            <li class="-nav-item -width-mobile" style="width: calc(100% / 8)">
-                <img src="{{ url('/home/build/web/shared/img/loading-lobby-circle.gif') }}" data-src="https://asset.cloudigame.co/build/admin/img/lobby_main/wt-ea-logo-circle.png" alt="" class="-logo-circle lazyload">
-            </li>
-                        
-            <li class="-nav-item -width-mobile" style="width: calc(100% / 8)">
-                <img src="{{ url('/home/build/web/shared/img/loading-lobby-circle.gif') }}" data-src="https://asset.cloudigame.co/build/admin/img/lobby_main/wt-n2live-logo-circle.png" alt="" class="-logo-circle lazyload">
-            </li>
-                        
-            <li class="-nav-item -width-mobile" style="width: calc(100% / 8)">
-                <img src="{{ url('/home/build/web/shared/img/loading-lobby-circle.gif') }}" data-src="https://asset.cloudigame.co/build/admin/img/lobby_main/wt-pp-live-logo-circle.png" alt="" class="-logo-circle lazyload">
-            </li>
+                @if((get_game()))
+                @foreach(get_game() as $u)
+                                    
+                    <li class="-nav-item -width-mobile" style="width: calc(100% / 8)">
+                            <img 
+                            src="{{ url('/home/build/web/shared/img/loading-lobby-circle.gif') }}" 
+                            data-src="{{ url('images/game/game/'.$u->game_image) }}" 
+                            alt="" 
+                            class="-logo-circle lazyload">
+                    </li>
+
+                @endforeach
+            @endif
                     </ul>
 
     </div>

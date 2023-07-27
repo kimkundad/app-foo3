@@ -10,6 +10,21 @@ function get_title_facebook(){
     return $objs->facebook_title;
 }
 
+function get_game(){
+    
+    $objs = DB::table('games')->select(
+        'games.*',
+        'games.id as id_q',
+        'games.status as status1',
+        'categories.*',
+        )
+        ->leftjoin('categories', 'categories.id',  'games.cat_id')
+        ->where('games.cat_id', 1)
+        ->get();
+
+    return $objs;
+}
+
 function get_facebook_detail(){
     $id = 1;
     $objs = setting::find($id);

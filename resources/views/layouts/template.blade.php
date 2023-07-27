@@ -27,8 +27,8 @@
 
 </head>
 
-<body class="layout-row">
-    
+<body class="x-landing">
+    <div id="main__content" class="">
 
         @if (Auth::guest())
         @else
@@ -49,7 +49,7 @@
         @yield('content')
 
 
-    
+    </div>
 
     <!-- JavaScripts -->
     @include('layouts.inc-script')

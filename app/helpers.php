@@ -34,6 +34,18 @@ function get_banner_url(){
     return $objs->google_analytic;
 }
 
+function get_banner_head(){
+    $id = 1;
+    $objs = setting::find($id);
+    return $objs->banner_point;
+}
+
+function get_banner_detail(){
+    $id = 1;
+    $objs = setting::find($id);
+    return $objs->banner_login;
+}
+
 function get_facebook_img(){
     $id = 1;
     $objs = setting::find($id);
